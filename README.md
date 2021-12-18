@@ -47,4 +47,19 @@ python object_detection/builders/model_builder_tf2_test.py
 ```
 ### Creating folder structure for custom dataset training.
 
-Use the training_demo
+1. Create the directories.
+```bash
+cd ../../ # back to /
+mkdir training_demo
+cd training_demo
+mkdir annotations models pre-trained-models images exported-models
+```
+2. Download Tensorflow model library
+```bash
+cd .. # back to /
+cd training_demo/pre-trained-models
+wget http://download.tensorflow.org/models/object_detection/tf2/20200711/ssd_resnet101_v1_fpn_640x640_coco17_tpu-8.tar.gz
+tar xvf ssd_resnet101_v1_fpn_640x640_coco17_tpu-8.tar.gz
+rm -r ssd_resnet101_v1_fpn_640x640_coco17_tpu-8.tar.gz
+```
+3. 
