@@ -54,7 +54,7 @@ mkdir training_demo
 cd training_demo
 mkdir annotations models pre-trained-models images exported-models
 ```
-2. Download a pretrained Tensorflow model into pre-trained-models directory.
+2. Download a pretrained Tensorflow model into pre-trained-models directory. Tensorflow model zoo - https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md
 ```bash
 cd .. # back to /
 cd training_demo/pre-trained-models
@@ -91,7 +91,7 @@ cp pre-trained-models/ssd_resnet101_v1_fpn_640x640_coco17_tpu-8/pipeline.config 
 Apply edits as below.
 ```yaml
 num_classes: 2 # Set this to the number of different label classes
-batch_size: 16 # Increase/Decrease this value depending on the available memory (Higher values require more memory and vice-versa)
+batch_size: 8 # Increase/Decrease this value depending on the available memory (Higher values require more memory and vice-versa)
 fine_tune_checkpoint: "pre-trained-models/ssd_resnet101_v1_fpn_640x640_coco17_tpu-8/checkpoint/ckpt-0" # Path to checkpoint of pre-trained model
 fine_tune_checkpoint_type: "detection" # Set this to "detection" since we want to be training the full detection model
 use_bfloat16: false # Set this to false if you are not training on a TPU
@@ -105,5 +105,9 @@ input_path: "annotations/test.record" # Path to testing TFRecord
 7. Train it. Copy training script right into the training_demo dir.
 ```bash
 cp models/research/object_detection/model_main_tf2.py training_demo
+# execute training command from training_demo
 python model_main_tf2.py --model_dir=models/my_ssd_resnet50_v1_fpn --pipeline_config_path=models/my_ssd_resnet50_v1_fpn/pipeline.config
+
+# for centernet
+python model_main_tf2.py --model_dir=models/centernet_mobilenetv2_fpn_od --pipeline_config_path=models/centernet_mobilenetv2_fpn_od/pipeline.config
 ```
