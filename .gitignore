@@ -16,5 +16,8 @@ seq_flow_lite
 slim
 vid2depth
 lstm_object_detection
-ckpt-0.data-00000-of-00001
-variables.data-00000-of-00001
+ckpt*
+variables*
+events*
+
+*.deb

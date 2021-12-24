@@ -112,4 +112,6 @@ def main(unused_argv):
           record_summaries=FLAGS.record_summaries)
 
 if __name__ == '__main__':
+  gpus = tf.config.list_physical_devices('GPU')
+  tf.config.experimental.set_memory_growth(gpus[0], True)
   tf.compat.v1.app.run()
