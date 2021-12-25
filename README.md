@@ -109,5 +109,5 @@ cp models/research/object_detection/model_main_tf2.py training_demo
 python model_main_tf2.py --model_dir=models/my_ssd_resnet50_v1_fpn --pipeline_config_path=models/my_ssd_resnet50_v1_fpn/pipeline.config
 
 # for centernet
-python model_main_tf2.py --model_dir=models/centernet_mobilenetv2_fpn_od --pipeline_config_path=models/centernet_mobilenetv2_fpn_od/pipeline.config
+python model_main_tf2.py --model_dir=models/my_ssd_mobilenet_v2_320x320_coco17_tpu-8 --pipeline_config_path=models/my_ssd_mobilenet_v2_320x320_coco17_tpu-8/pipeline.config
 ```

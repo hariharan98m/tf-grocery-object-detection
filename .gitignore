@@ -17,7 +17,7 @@ slim
 vid2depth
 lstm_object_detection
 ckpt*
-variables*
+*variables*
 events*
-
+*dataset*
 *.deb
