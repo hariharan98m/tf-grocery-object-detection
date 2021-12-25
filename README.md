@@ -39,7 +39,7 @@ cp -r pycocotools ../../ # models/research
 ```bash
 cd ../../ # models/research
 cp object_detection/packages/tf2/setup.py .
-python -m pip install --use-feature=2020-resolver .
+python -m pip install .
 ```
 6. Run tests to confirm proper installation.
 ```bash
@@ -67,12 +67,12 @@ rm -r ssd_resnet101_v1_fpn_640x640_coco17_tpu-8.tar.gz
 ```yaml
 item {
     id: 1
-    name: 'car'
+    name: 'apple_kashmir'
 }
 
 item {
     id: 2
-    name: 'bike'
+    name: 'banana_red'
 }
 ```
 5. Generate tfrecord files for train/test sets. For that grab code from https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/training.html and save into ```generate_tfrecord.py``` file.
@@ -82,6 +82,11 @@ python generate_tfrecord.py -i training_demo/images/train -x training_demo/image
 
 # test
 python generate_tfrecord.py -i training_demo/images/test -x training_demo/images/test -l training_demo/annotations/label_map.pbtxt -o training_demo/annotations/test.record
+```
+
+**Side Note:** Command to copy annotations from local mac to aws GPU 
+```bash
+scp -r -i hari_cisco.pem training_demo/annotations ubuntu@ec2-65-0-119-51.ap-south-1.compute.amazonaws.com:/home/ubuntu/tf-grocery-object-detection/training_demo
 ```
 6. Configuring training job. Lets get the pipeline.config under the pretrained directory right into our custom model training dir.
 ```bash

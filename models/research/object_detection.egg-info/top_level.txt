@@ -1,5 +1,1 @@
-datasets
-deployment
-nets
 object_detection
-preprocessing

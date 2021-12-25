@@ -21,3 +21,8 @@ ckpt*
 events*
 *dataset*
 *.deb
+protos
+object_detection_dataset
+
+IMG_*.xml
+IMG_*.jpg

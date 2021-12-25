@@ -1,9 +1,9 @@
 item {
     id: 1
-    name: 'banana'
+    name: 'apple_kashmir'
 }
 
 item {
     id: 2
-    name: 'apple'
+    name: 'banana_red'
 }
