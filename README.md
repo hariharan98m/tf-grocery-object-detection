@@ -116,3 +116,13 @@ python model_main_tf2.py --model_dir=models/my_ssd_resnet50_v1_fpn --pipeline_co
 # for centernet
 python model_main_tf2.py --model_dir=models/my_ssd_mobilenet_v2_320x320_coco17_tpu-8 --pipeline_config_path=models/my_ssd_mobilenet_v2_320x320_coco17_tpu-8/pipeline.config
 ```
+
+## Exporting trained model
+```bash
+# execute from /. copy the exporter_main script into training_demo.
+cp models/research/object_detection/exporter_main_v2.py training_demo/
+cd training_demo
+python exporter_main_v2.py --input_type image_tensor --pipeline_config_path models/my_ssd_mobilenet_v2_320x320_coco17_tpu-8/pipeline.config --trained_checkpoint_dir models/my_ssd_mobilenet_v2_320x320_coco17_tpu-8 --output_directory exported-models/my_model
+# copy this back into mac. from / in local run.
+scp -r -i "hari_cisco.pem" -r ubuntu@ec2-3-111-49-20.ap-south-1.compute.amazonaws.com:/home/ubuntu/tf-grocery-object-detection/training_demo/exported-models training_demo
+```
