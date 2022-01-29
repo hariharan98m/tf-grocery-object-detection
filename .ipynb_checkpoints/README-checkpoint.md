@@ -126,3 +126,9 @@ python exporter_main_v2.py --input_type image_tensor --pipeline_config_path mode
 # copy this back into mac. from / in local run.
 scp -r -i "hari_cisco.pem" -r ubuntu@ec2-3-111-49-20.ap-south-1.compute.amazonaws.com:/home/ubuntu/tf-grocery-object-detection/training_demo/exported-models training_demo
 ```
+
+## Evaluating trained model
+We consider three metrics for this usecase: **Precision, Recall and F1-score.**
+Precision = TP / (TP+FP)
+Recall = TP / (TP+FN)
+F1-score = 2PR/(P+R)
