@@ -36,3 +36,4 @@ training_demo/predictions
 client_secret_262136093692-al3j5ncqanp8sqmrkml05usoutmjamst.apps.googleusercontent.com.json
 retailzz-4d18b61af484.json
 datasets/
+*.pth
