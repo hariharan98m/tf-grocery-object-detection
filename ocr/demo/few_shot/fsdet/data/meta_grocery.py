@@ -12,7 +12,7 @@ from pathlib import Path
 
 def grocery_dataset_loader(name, thing_classes):
     data = []
-    base_dir = '/Users/hariharan/hari_works/grocery-object-detection/ocr/demo/grocery-db'
+    base_dir = '/home/ubuntu/tf-grocery-object-detection/ocr/demo/grocery-db'
     # thing_classes = ["3roses_top_star", "dettol_250ml", "hamam_100g", "nescafe_classic"]
     # thing_classes = ["3roses_top_star", "dettol_250ml", "hamam_100g", "nescafe_classic"]
 
