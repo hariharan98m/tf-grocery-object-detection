@@ -10,9 +10,10 @@ __all__ = ["register_meta_pascal_voc"]
 
 from pathlib import Path
 
-def grocery_dataset_loader(name, thing_classes = ["3roses_top_star", "dettol_250ml", "hamam_100g", "nescafe_classic"]):
+def grocery_dataset_loader(name, thing_classes):
     data = []
     base_dir = '/Users/hariharan/hari_works/grocery-object-detection/ocr/demo/grocery-db'
+    # thing_classes = ["3roses_top_star", "dettol_250ml", "hamam_100g", "nescafe_classic"]
     # thing_classes = ["3roses_top_star", "dettol_250ml", "hamam_100g", "nescafe_classic"]
 
     index = 0

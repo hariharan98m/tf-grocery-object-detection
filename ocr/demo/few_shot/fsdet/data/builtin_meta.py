@@ -456,7 +456,17 @@ def _get_pascal_voc_fewshot_instances_meta():
 
 def _get_grocery_fewshot_instances_meta():
     thing_classes = [ # all classes
-        "3roses_top_star", "dettol_250ml", "hamam_100g", "nescafe_classic"
+        "3roses_top_star",
+        "dettol_250ml",
+        "dettol_500ml",
+        "guntur_chilli",
+        "hamam_100g",
+        "maha_jyothi",
+        "moong_dhal",
+        "nescafe_classic",
+        "nescafe_sunrise",
+        "super_shine",
+        "vim_soap"
     ]
     # base_classes = [ # base clases
     #     "aeroplane", "bicycle", "boat", "bottle", "car", "cat", "chair",

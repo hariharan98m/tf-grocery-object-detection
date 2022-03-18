@@ -70,8 +70,9 @@ def get_parser():
     )
     return parser
 
-
+# import pdb
 if __name__ == "__main__":
+    # pdb.set_trace()
     mp.set_start_method("spawn", force=True)
     args = get_parser().parse_args()
     setup_logger(name="fvcore")

@@ -64,7 +64,7 @@ MODEL:
     FREEZE: true
     FREEZE_AT: 2
     NAME: build_resnet_fpn_backbone
-  DEVICE: cpu
+  DEVICE: cuda
   FPN:
     FUSE_TYPE: sum
     IN_FEATURES:
@@ -282,7 +282,6 @@ SOLVER:
   AMP:
     ENABLED: false
   BASE_LR: 0.001
-  BASE_LR_END: 0.0
   BIAS_LR_FACTOR: 1.0
   CHECKPOINT_PERIOD: 500
   CLIP_GRADIENTS:
