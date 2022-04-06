@@ -1,4 +1,4 @@
-**Useful Links:**
+**Info**
 
-1. https://towardsdatascience.com/object-detection-with-tensorflow-model-and-opencv-d839f3e42849
-2. 
+Ignore these directories/files.
+Jump straight to <code>demo/few_shot/ </code>
