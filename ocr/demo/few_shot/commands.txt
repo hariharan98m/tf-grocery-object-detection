@@ -15,8 +15,8 @@ python -m demo.demo \
 # predict on trained model.
 python -m demo.demo \
         --config-file configs/Grocery-detection/faster_rcnn_R101_FPN_ft_all.yaml \
-        --input /Users/hariharan/hari_works/grocery-object-detection/ocr/demo/grocery-db/hamam_100g/IMG_20220214_162026.jpg \
-        --opts MODEL.WEIGHTS checkpoints/grocery/faster_rcnn/faster_rcnn_R_101_FPN_ft_normalized_all1_1shot_randnovel/model_0000499.pth \
+        --input /Users/hariharan/hari_works/grocery-object-detection/ocr/demo/grocery-db/nescafe_classic/IMG_20220214_162007.jpg \
+        --opts MODEL.WEIGHTS checkpoints/grocery/faster_rcnn/faster_rcnn_R_101_FPN_cosine_11classes/model_0000499.pth \
         MODEL.DEVICE cpu
 
 IMG_20220214_162021.jpg
@@ -61,10 +61,20 @@ python3 -m tools.train_net \
         --config-file configs/Grocery-detection/faster_rcnn_R101_FPN_ft_all.yaml \
         --opts MODEL.WEIGHTS checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_all1/model_reset_surgery.pth
 
+# get model back from server to here.
+scp -i "hari_cisco.pem" \
+        -r ubuntu@ec2-65-1-128-91.ap-south-1.compute.amazonaws.com:/home/ubuntu/tf-grocery-object-detection/ocr/demo/few_shot/checkpoints/grocery/faster_rcnn/faster_rcnn_R_101_FPN_cosine_11classes/model_0001199.pth \
+        ocr/demo/few_shot/checkpoints/grocery/faster_rcnn/faster_rcnn_R_101_FPN_cosine_11classes
+
+scp -i "hari_cisco.pem" \
+        -r ubuntu@ec2-65-1-113-211.ap-south-1.compute.amazonaws.com:/home/ubuntu/tf-grocery-object-detection/ocr/demo/few_shot/checkpoints/grocery/faster_rcnn/faster_rcnn_R_101_FPN_cosine_11classes/model_0001199.pth \
+        ocr/demo/few_shot/checkpoints/grocery/faster_rcnn/faster_rcnn_R_101_FPN_cosine_11classes
 
 # Copy this to server
 
-/Users/hariharan/hari_works/grocery-object-detection/hari_cisco.pem
+
+
+ssh -i /Users/hariharan/hari_works/grocery-object-detection/hari_cisco.pem ubuntu@ec2-65-1-113-211.ap-south-1.compute.amazonaws.com
 
 scp -i "hari_cisco.pem" /Users/hariharan/hari_works/grocery-object-detection/ocr/demo/few_shot/checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_all1/model_reset_surgery.pth ubuntu@ec2-3-110-211-59.ap-south-1.compute.amazonaws.com:/home/ubuntu/tf-grocery-object-detection/ocr/demo/few_shot/checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_all1
 
