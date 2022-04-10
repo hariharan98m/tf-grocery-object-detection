@@ -1,0 +1,26 @@
+<annotation>
+	<folder>banana_red</folder>
+	<filename>IMG_20211016_103733.jpg</filename>
+	<path>/Users/hariharan/hari_works/grocery-object-detection/training_demo/images/train/IMG_20211016_103733.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>320</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>banana_red</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>159</xmin>
+			<ymin>106</ymin>
+			<xmax>512</xmax>
+			<ymax>227</ymax>
+		</bndbox>
+	</object>
+</annotation>

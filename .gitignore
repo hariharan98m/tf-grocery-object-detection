@@ -24,8 +24,8 @@ events*
 protos
 object_detection_dataset
 
-IMG_*.xml
-IMG_*.jpg
+# IMG_*.xml
+# IMG_*.jpg
 
 .ipynb_checkpoints
 .DS_Store
