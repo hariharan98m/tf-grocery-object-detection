@@ -1,0 +1,351 @@
+[03/07 20:31:17] detectron2 INFO: Rank of current process: 0. World size: 1
+[03/07 20:31:17] detectron2 INFO: Command line arguments: Namespace(config_file='configs/PascalVOC-detection/split1/faster_rcnn_R_101_FPN_ft_all1_1shot.yaml', resume=False, eval_only=False, eval_all=False, eval_during_train=False, eval_iter=-1, start_iter=-1, end_iter=-1, num_gpus=1, num_machines=1, machine_rank=0, dist_url='tcp://127.0.0.1:49654', opts=['MODEL.WEIGHTS', 'checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_all1/model_reset_surgery.pth', 'MODEL.DEVICE', 'cpu'])
+[03/07 20:31:17] detectron2 INFO: Contents of args.config_file=configs/PascalVOC-detection/split1/faster_rcnn_R_101_FPN_ft_all1_1shot.yaml:
+_BASE_: "../../Base-RCNN-FPN.yaml"
+MODEL:
+  WEIGHTS: "checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_base1/model_reset_surgery.pth"
+  MASK_ON: False
+  RESNETS:
+    DEPTH: 101
+  ROI_HEADS:
+    NUM_CLASSES: 20
+    OUTPUT_LAYER: "CosineSimOutputLayers"
+    FREEZE_FEAT: True
+  BACKBONE:
+    FREEZE: True
+  PROPOSAL_GENERATOR:
+    FREEZE: True
+INPUT:
+  MIN_SIZE_TRAIN: (480, 512, 544, 576, 608, 640, 672, 704, 736, 768, 800)
+  MIN_SIZE_TEST: 800
+DATASETS:
+  TRAIN: ('voc_2007_trainval_all1_1shot',)
+  TEST: ('voc_2007_test_all1',)
+SOLVER:
+  IMS_PER_BATCH: 16
+  BASE_LR: 0.001
+  STEPS: (3000,)
+  MAX_ITER: 4000
+  CHECKPOINT_PERIOD: 500
+  WARMUP_ITERS: 0
+OUTPUT_DIR: "checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_ft_normalized_all1_1shot_randnovel"
+[03/07 20:31:17] detectron2 INFO: Full config saved to /Users/hariharan/hari_works/grocery-object-detection/ocr/demo/few_shot/few-shot-object-detection/checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_ft_normalized_all1_1shot_randnovel/config.yaml
+[03/07 20:31:17] d2.utils.env INFO: Using a generated random seed 17139329
+[03/07 20:51:02] detectron2 INFO: Rank of current process: 0. World size: 1
+[03/07 20:51:02] detectron2 INFO: Command line arguments: Namespace(config_file='configs/PascalVOC-detection/split1/faster_rcnn_R_101_FPN_ft_all1_1shot.yaml', resume=False, eval_only=False, eval_all=False, eval_during_train=False, eval_iter=-1, start_iter=-1, end_iter=-1, num_gpus=1, num_machines=1, machine_rank=0, dist_url='tcp://127.0.0.1:49654', opts=['MODEL.WEIGHTS', 'checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_all1/model_reset_surgery.pth', 'MODEL.DEVICE', 'cpu'])
+[03/07 20:51:02] detectron2 INFO: Contents of args.config_file=configs/PascalVOC-detection/split1/faster_rcnn_R_101_FPN_ft_all1_1shot.yaml:
+_BASE_: "../../Base-RCNN-FPN.yaml"
+MODEL:
+  WEIGHTS: "checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_base1/model_reset_surgery.pth"
+  MASK_ON: False
+  RESNETS:
+    DEPTH: 101
+  ROI_HEADS:
+    NUM_CLASSES: 20
+    OUTPUT_LAYER: "CosineSimOutputLayers"
+    FREEZE_FEAT: True
+  BACKBONE:
+    FREEZE: True
+  PROPOSAL_GENERATOR:
+    FREEZE: True
+INPUT:
+  MIN_SIZE_TRAIN: (480, 512, 544, 576, 608, 640, 672, 704, 736, 768, 800)
+  MIN_SIZE_TEST: 800
+DATASETS:
+  TRAIN: ('voc_2007_trainval_all1_1shot',)
+  TEST: ('voc_2007_test_all1',)
+SOLVER:
+  IMS_PER_BATCH: 16
+  BASE_LR: 0.001
+  STEPS: (3000,)
+  MAX_ITER: 4000
+  CHECKPOINT_PERIOD: 500
+  WARMUP_ITERS: 0
+OUTPUT_DIR: "checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_ft_normalized_all1_1shot_randnovel"
+[03/07 20:51:02] detectron2 INFO: Full config saved to /Users/hariharan/hari_works/grocery-object-detection/ocr/demo/few_shot/few-shot-object-detection/checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_ft_normalized_all1_1shot_randnovel/config.yaml
+[03/07 20:51:02] d2.utils.env INFO: Using a generated random seed 2181630
+[03/07 21:00:49] detectron2 INFO: Rank of current process: 0. World size: 1
+[03/07 21:00:49] detectron2 INFO: Command line arguments: Namespace(config_file='./configs/PascalVOC-detection/split1/faster_rcnn_R_101_FPN_ft_all1_1shot.yaml', resume=True, eval_only=False, eval_all=False, eval_during_train=False, eval_iter=-1, start_iter=-1, end_iter=-1, num_gpus=0, num_machines=1, machine_rank=0, dist_url='auto', opts=None)
+[03/07 21:00:49] detectron2 INFO: Contents of args.config_file=./configs/PascalVOC-detection/split1/faster_rcnn_R_101_FPN_ft_all1_1shot.yaml:
+_BASE_: "../../Base-RCNN-FPN.yaml"
+MODEL:
+  WEIGHTS: "checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_base1/model_reset_surgery.pth"
+  MASK_ON: False
+  RESNETS:
+    DEPTH: 101
+  ROI_HEADS:
+    NUM_CLASSES: 20
+    OUTPUT_LAYER: "CosineSimOutputLayers"
+    FREEZE_FEAT: True
+  BACKBONE:
+    FREEZE: True
+  PROPOSAL_GENERATOR:
+    FREEZE: True
+INPUT:
+  MIN_SIZE_TRAIN: (480, 512, 544, 576, 608, 640, 672, 704, 736, 768, 800)
+  MIN_SIZE_TEST: 800
+DATASETS:
+  TRAIN: ('voc_2007_trainval_all1_1shot',)
+  TEST: ('voc_2007_test_all1',)
+SOLVER:
+  IMS_PER_BATCH: 16
+  BASE_LR: 0.001
+  STEPS: (3000,)
+  MAX_ITER: 4000
+  CHECKPOINT_PERIOD: 500
+  WARMUP_ITERS: 0
+OUTPUT_DIR: "checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_ft_normalized_all1_1shot_randnovel"
+[03/07 21:00:49] detectron2 INFO: Full config saved to /Users/hariharan/hari_works/grocery-object-detection/ocr/demo/few_shot/few-shot-object-detection/checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_ft_normalized_all1_1shot_randnovel/config.yaml
+[03/07 21:00:49] d2.utils.env INFO: Using a generated random seed 50023987
+[03/07 21:53:58] detectron2 INFO: Rank of current process: 0. World size: 1
+[03/07 21:53:58] detectron2 INFO: Command line arguments: Namespace(config_file='./configs/PascalVOC-detection/split1/faster_rcnn_R_101_FPN_ft_all1_1shot.yaml', resume=True, eval_only=False, eval_all=False, eval_during_train=False, eval_iter=-1, start_iter=-1, end_iter=-1, num_gpus=0, num_machines=1, machine_rank=0, dist_url='auto', opts=None)
+[03/07 21:53:58] detectron2 INFO: Contents of args.config_file=./configs/PascalVOC-detection/split1/faster_rcnn_R_101_FPN_ft_all1_1shot.yaml:
+_BASE_: "../../Base-RCNN-FPN.yaml"
+MODEL:
+  WEIGHTS: "checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_base1/model_reset_surgery.pth"
+  MASK_ON: False
+  RESNETS:
+    DEPTH: 101
+  ROI_HEADS:
+    NUM_CLASSES: 20
+    OUTPUT_LAYER: "CosineSimOutputLayers"
+    FREEZE_FEAT: True
+  BACKBONE:
+    FREEZE: True
+  PROPOSAL_GENERATOR:
+    FREEZE: True
+INPUT:
+  MIN_SIZE_TRAIN: (480, 512, 544, 576, 608, 640, 672, 704, 736, 768, 800)
+  MIN_SIZE_TEST: 800
+DATASETS:
+  TRAIN: ('voc_2007_trainval_all1_1shot',)
+  TEST: ('voc_2007_test_all1',)
+SOLVER:
+  IMS_PER_BATCH: 16
+  BASE_LR: 0.001
+  STEPS: (3000,)
+  MAX_ITER: 4000
+  CHECKPOINT_PERIOD: 500
+  WARMUP_ITERS: 0
+OUTPUT_DIR: "checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_ft_normalized_all1_1shot_randnovel"
+[03/07 21:53:58] detectron2 INFO: Full config saved to /Users/hariharan/hari_works/grocery-object-detection/ocr/demo/few_shot/few-shot-object-detection/checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_ft_normalized_all1_1shot_randnovel/config.yaml
+[03/07 21:53:58] d2.utils.env INFO: Using a generated random seed 58867963
+[03/07 21:54:19] detectron2 INFO: Rank of current process: 0. World size: 1
+[03/07 21:54:19] detectron2 INFO: Command line arguments: Namespace(config_file='./configs/PascalVOC-detection/split1/faster_rcnn_R_101_FPN_ft_all1_1shot.yaml', resume=True, eval_only=False, eval_all=False, eval_during_train=False, eval_iter=-1, start_iter=-1, end_iter=-1, num_gpus=0, num_machines=1, machine_rank=0, dist_url='auto', opts=None)
+[03/07 21:54:19] detectron2 INFO: Contents of args.config_file=./configs/PascalVOC-detection/split1/faster_rcnn_R_101_FPN_ft_all1_1shot.yaml:
+_BASE_: "../../Base-RCNN-FPN.yaml"
+MODEL:
+  WEIGHTS: "checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_base1/model_reset_surgery.pth"
+  MASK_ON: False
+  RESNETS:
+    DEPTH: 101
+  ROI_HEADS:
+    NUM_CLASSES: 20
+    OUTPUT_LAYER: "CosineSimOutputLayers"
+    FREEZE_FEAT: True
+  BACKBONE:
+    FREEZE: True
+  PROPOSAL_GENERATOR:
+    FREEZE: True
+INPUT:
+  MIN_SIZE_TRAIN: (480, 512, 544, 576, 608, 640, 672, 704, 736, 768, 800)
+  MIN_SIZE_TEST: 800
+DATASETS:
+  TRAIN: ('voc_2007_trainval_all1_1shot',)
+  TEST: ('voc_2007_test_all1',)
+SOLVER:
+  IMS_PER_BATCH: 16
+  BASE_LR: 0.001
+  STEPS: (3000,)
+  MAX_ITER: 4000
+  CHECKPOINT_PERIOD: 500
+  WARMUP_ITERS: 0
+OUTPUT_DIR: "checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_ft_normalized_all1_1shot_randnovel"
+[03/07 21:54:19] detectron2 INFO: Full config saved to /Users/hariharan/hari_works/grocery-object-detection/ocr/demo/few_shot/few-shot-object-detection/checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_ft_normalized_all1_1shot_randnovel/config.yaml
+[03/07 21:54:19] d2.utils.env INFO: Using a generated random seed 19570030
+[03/07 21:54:23] detectron2 INFO: Rank of current process: 0. World size: 1
+[03/07 21:54:23] detectron2 INFO: Command line arguments: Namespace(config_file='./configs/PascalVOC-detection/split1/faster_rcnn_R_101_FPN_ft_all1_1shot.yaml', resume=True, eval_only=True, eval_all=False, eval_during_train=False, eval_iter=-1, start_iter=-1, end_iter=-1, num_gpus=0, num_machines=1, machine_rank=0, dist_url='auto', opts=None)
+[03/07 21:54:23] detectron2 INFO: Contents of args.config_file=./configs/PascalVOC-detection/split1/faster_rcnn_R_101_FPN_ft_all1_1shot.yaml:
+_BASE_: "../../Base-RCNN-FPN.yaml"
+MODEL:
+  WEIGHTS: "checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_base1/model_reset_surgery.pth"
+  MASK_ON: False
+  RESNETS:
+    DEPTH: 101
+  ROI_HEADS:
+    NUM_CLASSES: 20
+    OUTPUT_LAYER: "CosineSimOutputLayers"
+    FREEZE_FEAT: True
+  BACKBONE:
+    FREEZE: True
+  PROPOSAL_GENERATOR:
+    FREEZE: True
+INPUT:
+  MIN_SIZE_TRAIN: (480, 512, 544, 576, 608, 640, 672, 704, 736, 768, 800)
+  MIN_SIZE_TEST: 800
+DATASETS:
+  TRAIN: ('voc_2007_trainval_all1_1shot',)
+  TEST: ('voc_2007_test_all1',)
+SOLVER:
+  IMS_PER_BATCH: 16
+  BASE_LR: 0.001
+  STEPS: (3000,)
+  MAX_ITER: 4000
+  CHECKPOINT_PERIOD: 500
+  WARMUP_ITERS: 0
+OUTPUT_DIR: "checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_ft_normalized_all1_1shot_randnovel"
+[03/07 21:54:23] detectron2 INFO: Full config saved to /Users/hariharan/hari_works/grocery-object-detection/ocr/demo/few_shot/few-shot-object-detection/checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_ft_normalized_all1_1shot_randnovel/config.yaml
+[03/07 21:54:23] d2.utils.env INFO: Using a generated random seed 23250987
+[03/07 21:56:16] detectron2 INFO: Rank of current process: 0. World size: 1
+[03/07 21:56:16] detectron2 INFO: Command line arguments: Namespace(config_file='./configs/PascalVOC-detection/split1/faster_rcnn_R_101_FPN_ft_all1_1shot.yaml', resume=True, eval_only=False, eval_all=False, eval_during_train=False, eval_iter=-1, start_iter=-1, end_iter=-1, num_gpus=0, num_machines=1, machine_rank=0, dist_url='auto', opts=None)
+[03/07 21:56:16] detectron2 INFO: Contents of args.config_file=./configs/PascalVOC-detection/split1/faster_rcnn_R_101_FPN_ft_all1_1shot.yaml:
+_BASE_: "../../Base-RCNN-FPN.yaml"
+MODEL:
+  WEIGHTS: "checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_base1/model_reset_surgery.pth"
+  MASK_ON: False
+  RESNETS:
+    DEPTH: 101
+  ROI_HEADS:
+    NUM_CLASSES: 20
+    OUTPUT_LAYER: "CosineSimOutputLayers"
+    FREEZE_FEAT: True
+  BACKBONE:
+    FREEZE: True
+  PROPOSAL_GENERATOR:
+    FREEZE: True
+INPUT:
+  MIN_SIZE_TRAIN: (480, 512, 544, 576, 608, 640, 672, 704, 736, 768, 800)
+  MIN_SIZE_TEST: 800
+DATASETS:
+  TRAIN: ('voc_2007_trainval_all1_1shot',)
+  TEST: ('voc_2007_test_all1',)
+SOLVER:
+  IMS_PER_BATCH: 16
+  BASE_LR: 0.001
+  STEPS: (3000,)
+  MAX_ITER: 4000
+  CHECKPOINT_PERIOD: 500
+  WARMUP_ITERS: 0
+OUTPUT_DIR: "checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_ft_normalized_all1_1shot_randnovel"
+[03/07 21:56:16] detectron2 INFO: Full config saved to /Users/hariharan/hari_works/grocery-object-detection/ocr/demo/few_shot/few-shot-object-detection/checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_ft_normalized_all1_1shot_randnovel/config.yaml
+[03/07 21:56:16] d2.utils.env INFO: Using a generated random seed 16693748
+[03/07 21:56:20] detectron2 INFO: Rank of current process: 0. World size: 1
+[03/07 21:56:20] detectron2 INFO: Command line arguments: Namespace(config_file='./configs/PascalVOC-detection/split1/faster_rcnn_R_101_FPN_ft_all1_1shot.yaml', resume=True, eval_only=True, eval_all=False, eval_during_train=False, eval_iter=-1, start_iter=-1, end_iter=-1, num_gpus=0, num_machines=1, machine_rank=0, dist_url='auto', opts=None)
+[03/07 21:56:20] detectron2 INFO: Contents of args.config_file=./configs/PascalVOC-detection/split1/faster_rcnn_R_101_FPN_ft_all1_1shot.yaml:
+_BASE_: "../../Base-RCNN-FPN.yaml"
+MODEL:
+  WEIGHTS: "checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_base1/model_reset_surgery.pth"
+  MASK_ON: False
+  RESNETS:
+    DEPTH: 101
+  ROI_HEADS:
+    NUM_CLASSES: 20
+    OUTPUT_LAYER: "CosineSimOutputLayers"
+    FREEZE_FEAT: True
+  BACKBONE:
+    FREEZE: True
+  PROPOSAL_GENERATOR:
+    FREEZE: True
+INPUT:
+  MIN_SIZE_TRAIN: (480, 512, 544, 576, 608, 640, 672, 704, 736, 768, 800)
+  MIN_SIZE_TEST: 800
+DATASETS:
+  TRAIN: ('voc_2007_trainval_all1_1shot',)
+  TEST: ('voc_2007_test_all1',)
+SOLVER:
+  IMS_PER_BATCH: 16
+  BASE_LR: 0.001
+  STEPS: (3000,)
+  MAX_ITER: 4000
+  CHECKPOINT_PERIOD: 500
+  WARMUP_ITERS: 0
+OUTPUT_DIR: "checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_ft_normalized_all1_1shot_randnovel"
+[03/07 21:56:20] detectron2 INFO: Full config saved to /Users/hariharan/hari_works/grocery-object-detection/ocr/demo/few_shot/few-shot-object-detection/checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_ft_normalized_all1_1shot_randnovel/config.yaml
+[03/07 21:56:20] d2.utils.env INFO: Using a generated random seed 21051737
+[03/07 21:59:48] detectron2 INFO: Rank of current process: 0. World size: 1
+[03/07 21:59:48] detectron2 INFO: Command line arguments: Namespace(config_file='configs/PascalVOC-detection/split1/faster_rcnn_R_101_FPN_ft_all1_1shot.yaml', resume=False, eval_only=False, eval_all=False, eval_during_train=False, eval_iter=-1, start_iter=-1, end_iter=-1, num_gpus=1, num_machines=1, machine_rank=0, dist_url='tcp://127.0.0.1:49654', opts=['MODEL.WEIGHTS', 'checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_all1/model_reset_surgery.pth', 'MODEL.DEVICE', 'cpu'])
+[03/07 21:59:48] detectron2 INFO: Contents of args.config_file=configs/PascalVOC-detection/split1/faster_rcnn_R_101_FPN_ft_all1_1shot.yaml:
+_BASE_: "../../Base-RCNN-FPN.yaml"
+MODEL:
+  WEIGHTS: "checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_base1/model_reset_surgery.pth"
+  MASK_ON: False
+  RESNETS:
+    DEPTH: 101
+  ROI_HEADS:
+    NUM_CLASSES: 20
+    OUTPUT_LAYER: "CosineSimOutputLayers"
+    FREEZE_FEAT: True
+  BACKBONE:
+    FREEZE: True
+  PROPOSAL_GENERATOR:
+    FREEZE: True
+INPUT:
+  MIN_SIZE_TRAIN: (480, 512, 544, 576, 608, 640, 672, 704, 736, 768, 800)
+  MIN_SIZE_TEST: 800
+DATASETS:
+  TRAIN: ('voc_2007_trainval_all1_1shot_seed1',)   #voc_2007_trainval_all1_1shot_seed1
+  TEST: ('voc_2007_test_all1',)
+SOLVER:
+  IMS_PER_BATCH: 16
+  BASE_LR: 0.001
+  STEPS: (3000,)
+  MAX_ITER: 4000
+  CHECKPOINT_PERIOD: 500
+  WARMUP_ITERS: 0
+OUTPUT_DIR: "checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_ft_normalized_all1_1shot_randnovel"
+[03/07 21:59:48] detectron2 INFO: Full config saved to /Users/hariharan/hari_works/grocery-object-detection/ocr/demo/few_shot/few-shot-object-detection/checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_ft_normalized_all1_1shot_randnovel/config.yaml
+[03/07 21:59:48] d2.utils.env INFO: Using a generated random seed 48537739
+[03/07 21:59:49] d2.data.build INFO: Removed 0 images with no usable annotations. 20 images left.
+[03/07 21:59:49] d2.data.build INFO: Distribution of instances among all 20 categories:
+[36m|  category  | #instances   |  category   | #instances   |  category   | #instances   |
+|:----------:|:-------------|:-----------:|:-------------|:-----------:|:-------------|
+| aeroplane  | 1            |   bicycle   | 1            |    boat     | 1            |
+|   bottle   | 1            |     car     | 1            |     cat     | 1            |
+|   chair    | 1            | diningtable | 1            |     dog     | 1            |
+|   horse    | 1            |   person    | 1            | pottedplant | 1            |
+|   sheep    | 1            |    train    | 1            |  tvmonitor  | 1            |
+|    bird    | 1            |     bus     | 1            |     cow     | 1            |
+| motorbike  | 1            |    sofa     | 1            |             |              |
+|   total    | 20           |             |              |             |              |[0m
+[03/07 21:59:49] d2.data.dataset_mapper INFO: [DatasetMapper] Augmentations used in training: [ResizeShortestEdge(short_edge_length=(480, 512, 544, 576, 608, 640, 672, 704, 736, 768, 800), max_size=1333, sample_style='choice'), RandomFlip()]
+[03/07 21:59:49] d2.data.build INFO: Using training sampler TrainingSampler
+[03/07 21:59:49] d2.data.common INFO: Serializing 20 elements to byte tensors and concatenating them all ...
+[03/07 21:59:49] d2.data.common INFO: Serialized dataset takes 0.01 MiB
+[03/07 21:59:59] fvcore.common.checkpoint INFO: [Checkpointer] Loading from checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_all1/model_reset_surgery.pth ...
+[03/07 21:59:59] d2.engine.train_loop INFO: Starting training from iteration 0
+[03/07 22:27:59] d2.engine.hooks INFO: Overall training speed: 8 iterations in 0:22:23 (167.9905 s / it)
+[03/07 22:27:59] d2.engine.hooks INFO: Total training time: 0:22:23 (0:00:00 on hooks)
+[03/07 22:27:59] d2.utils.events INFO:  eta: 6 days, 23:32:00  iter: 10  total_loss: 0.2389  loss_cls: 0.1641  loss_box_reg: 0.05718  loss_rpn_cls: 0.01268  loss_rpn_loc: 0.003794  time: 153.7211  data_time: 0.7152  lr: 0.001  
+[03/13 11:43:28] detectron2 INFO: Rank of current process: 0. World size: 1
+[03/13 11:43:28] detectron2 INFO: Command line arguments: Namespace(config_file='configs/PascalVOC-detection/split1/faster_rcnn_R_101_FPN_ft_all1_1shot.yaml', resume=False, eval_only=False, eval_all=False, eval_during_train=False, eval_iter=-1, start_iter=-1, end_iter=-1, num_gpus=1, num_machines=1, machine_rank=0, dist_url='tcp://127.0.0.1:49654', opts=['MODEL.WEIGHTS', 'checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_all1/model_reset_surgery.pth', 'MODEL.DEVICE', 'cpu'])
+[03/13 11:43:28] detectron2 INFO: Contents of args.config_file=configs/PascalVOC-detection/split1/faster_rcnn_R_101_FPN_ft_all1_1shot.yaml:
+_BASE_: "../../Base-RCNN-FPN.yaml"
+MODEL:
+  WEIGHTS: "checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_base1/model_reset_surgery.pth"
+  MASK_ON: False
+  RESNETS:
+    DEPTH: 101
+  ROI_HEADS:
+    NUM_CLASSES: 20
+    OUTPUT_LAYER: "CosineSimOutputLayers"
+    FREEZE_FEAT: True
+  BACKBONE:
+    FREEZE: True
+  PROPOSAL_GENERATOR:
+    FREEZE: True
+INPUT:
+  MIN_SIZE_TRAIN: (480, 512, 544, 576, 608, 640, 672, 704, 736, 768, 800)
+  MIN_SIZE_TEST: 800
+DATASETS:
+  TRAIN: ('voc_2007_trainval_all1_1shot_seed1',)   #voc_2007_trainval_all1_1shot_seed1
+  TEST: ('voc_2007_test_all1',)
+SOLVER:
+  IMS_PER_BATCH: 16
+  BASE_LR: 0.001
+  STEPS: (3000,)
+  MAX_ITER: 4000
+  CHECKPOINT_PERIOD: 500
+  WARMUP_ITERS: 0
+OUTPUT_DIR: "checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_ft_normalized_all1_1shot_randnovel"
+[03/13 11:43:28] detectron2 INFO: Full config saved to /Users/hariharan/hari_works/grocery-object-detection/ocr/demo/few_shot/few-shot-object-detection/checkpoints/voc/faster_rcnn/faster_rcnn_R_101_FPN_ft_normalized_all1_1shot_randnovel/config.yaml
+[03/13 11:43:28] d2.utils.env INFO: Using a generated random seed 28700746

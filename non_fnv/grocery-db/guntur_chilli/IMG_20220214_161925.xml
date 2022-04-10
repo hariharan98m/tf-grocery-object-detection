@@ -1,0 +1,26 @@
+<annotation>
+	<folder>guntur_chilli</folder>
+	<filename>IMG_20220214_161925.jpg</filename>
+	<path>/Users/hariharan/hari_works/grocery-object-detection/ocr/demo/grocery-db/guntur_chilli/IMG_20220214_161925.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3456</width>
+		<height>4608</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>guntur_chilli</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>947</xmin>
+			<ymin>1860</ymin>
+			<xmax>2195</xmax>
+			<ymax>3687</ymax>
+		</bndbox>
+	</object>
+</annotation>

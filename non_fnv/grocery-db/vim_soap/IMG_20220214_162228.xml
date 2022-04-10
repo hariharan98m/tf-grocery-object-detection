@@ -1,0 +1,26 @@
+<annotation>
+	<folder>vim_soap</folder>
+	<filename>IMG_20220214_162228.jpg</filename>
+	<path>/Users/hariharan/hari_works/grocery-object-detection/ocr/demo/grocery-db/vim_soap/IMG_20220214_162228.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3456</width>
+		<height>4608</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>vim_soap</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>287</xmin>
+			<ymin>1513</ymin>
+			<xmax>974</xmax>
+			<ymax>1933</ymax>
+		</bndbox>
+	</object>
+</annotation>

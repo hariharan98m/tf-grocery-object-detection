@@ -30,7 +30,6 @@ IMG_*.jpg
 .ipynb_checkpoints
 .DS_Store
 training_demo/predictions
-*.ipynb
 
 *.pem
 client_secret_262136093692-al3j5ncqanp8sqmrkml05usoutmjamst.apps.googleusercontent.com.json

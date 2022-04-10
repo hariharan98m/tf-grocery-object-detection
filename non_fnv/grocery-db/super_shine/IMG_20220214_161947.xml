@@ -1,0 +1,26 @@
+<annotation>
+	<folder>super_shine</folder>
+	<filename>IMG_20220214_161947.jpg</filename>
+	<path>/Users/hariharan/hari_works/grocery-object-detection/ocr/demo/grocery-db/super_shine/IMG_20220214_161947.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3456</width>
+		<height>4608</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>super_shine</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>880</xmin>
+			<ymin>1907</ymin>
+			<xmax>2448</xmax>
+			<ymax>3053</ymax>
+		</bndbox>
+	</object>
+</annotation>
