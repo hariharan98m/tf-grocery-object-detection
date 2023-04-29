@@ -17,7 +17,7 @@ import pandas as pd
 from multiprocessing.pool import ThreadPool
 from tkinter import filedialog as fd
 from tkinter import *
-from nlp import filter_stopwords, match_vals, product_list, find_product
+from nlp_v2 import filter_stopwords, match_vals, product_list, find_product
 
 def ocr_mp(thresh):
     s = time.time()

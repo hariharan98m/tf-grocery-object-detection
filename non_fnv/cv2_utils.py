@@ -8,6 +8,8 @@ def resize_img(img_rgb, new_height = 2048.):
     size = int(factor * width_y), int(factor * length_x)
     # resize image
     img_rgb_resized = cv2.resize(img_rgb, size, Image.ANTIALIAS)
+    # cv2.imshow('after plotting boxes', img_rgb_resized)
+    # cv2.waitKey()
     return img_rgb_resized
 
 def inflate_boxes(boxes, original_size, new_height):

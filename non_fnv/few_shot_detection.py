@@ -62,9 +62,12 @@ def plot_boxes(img_rgb, boxes, labels, print_preds_times = False):
     start = time.time()
     # Putting the boxes and labels on the image
     for (ymin, xmin, ymax, xmax), label in zip(boxes, labels):
-        cv2.rectangle(img_rgb,(xmin, ymax),(xmax, ymin),(0,255,0), 2)
+        cv2.rectangle(img_rgb,(xmin, ymax),(xmax, ymin),(0,255,0), 3) # 3
         cv2.putText(img_rgb, label, (xmin, ymin), font,
-                    3, (0, 0, 255), 5, cv2.LINE_AA)
+                    3, (0, 0, 255), 5, cv2.LINE_AA) # 3
+
+        # cv2.putText(img = img_rgb, text = label, org = (xmin, ymin), fontFace=cv2.FONT_HERSHEY_DUPLEX,
+        #             fontScale=5, color = (0, 0, 0), thickness = 12)
     end = time.time()
     if print_preds_times:
         print(f'total plotting time: {round(end-start, 2)}s')

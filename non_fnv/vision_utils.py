@@ -61,6 +61,7 @@ def get_bounds(document, feature):
 
                 if feature == FeatureType.PARA:
                     bounds.append(bound2box(paragraph.bounding_box))
+                    texts.append(paragraph_text)
                 block_text+= (paragraph_text + '\n')
 
             if feature == FeatureType.BLOCK:

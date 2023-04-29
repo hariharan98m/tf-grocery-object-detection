@@ -454,8 +454,12 @@ def _get_pascal_voc_fewshot_instances_meta():
     }
     return ret
 
+from pathlib import Path
 def _get_grocery_fewshot_instances_meta():
-    thing_classes = [ # all classes
+    base_dir = '/Users/hariharan/hari_works/grocery-object-detection/non_fnv/grocery-db'
+    thing_classes = [p.name for p in Path(base_dir).iterdir() if p.is_dir() and p.name!='others']
+
+    [ # all classes
         "3roses_top_star",
         "dettol_250ml",
         "dettol_500ml",
