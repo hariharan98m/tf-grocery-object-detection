@@ -216,7 +216,7 @@ class ParamsDictIOTest(tf.test.TestCase):
             'c2': 20
         }
     })
-    output_yaml_file = os.path.join(self.get_temp_dir(), 'params.yaml')
+    output_yaml_file = os.path.join(self.get_temp_dir(), 'model_params.yaml')
     params_dict.save_params_dict_to_yaml(params, output_yaml_file)
 
     with tf.io.gfile.GFile(output_yaml_file, 'r') as f:
@@ -228,7 +228,7 @@ class ParamsDictIOTest(tf.test.TestCase):
 
   def test_read_yaml_to_params_dict(self):
     input_yaml_file = self.write_temp_file(
-        'params.yaml', r"""
+        'model_params.yaml', r"""
         a: 'aa'
         b: 2
         c:
@@ -339,7 +339,7 @@ class ParamsDictIOTest(tf.test.TestCase):
         'e': False
     })
     override_yaml_file = self.write_temp_file(
-        'params.yaml', r"""
+        'model_params.yaml', r"""
         b: 5.2
         c: [30, 40]
         """)

@@ -27,7 +27,7 @@ from official.projects.edgetpu.nlp.configs import params
 def serialize_config(experiment_params: params.EdgeTPUBERTCustomParams,
                      model_dir: str):
   """Serializes and saves the experiment config."""
-  params_save_path = os.path.join(model_dir, 'params.yaml')
+  params_save_path = os.path.join(model_dir, 'model_params.yaml')
   logging.info('Saving experiment configuration to %s', params_save_path)
   tf.io.gfile.makedirs(model_dir)
   hyperparams.save_params_dict_to_yaml(experiment_params, params_save_path)

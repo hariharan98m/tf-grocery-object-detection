@@ -183,7 +183,7 @@ class DistributedExecutor(object):
         tf.io.gfile.makedirs(model_dir)
       self._params.lock()
       params_dict.save_params_dict_to_yaml(self._params,
-                                           model_dir + '/params.yaml')
+                                           model_dir + '/model_params.yaml')
     else:
       logging.warning('model_dir is empty, so skip the save config.')
 

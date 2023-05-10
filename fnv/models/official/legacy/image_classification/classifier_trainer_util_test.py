@@ -157,7 +157,7 @@ class UtilTests(parameterized.TestCase, tf.test.TestCase):
     config = base_configs.ExperimentConfig()
     model_dir = self.create_tempdir().full_path
     classifier_trainer.serialize_config(params=config, model_dir=model_dir)
-    saved_params_path = os.path.join(model_dir, 'params.yaml')
+    saved_params_path = os.path.join(model_dir, 'model_params.yaml')
     self.assertTrue(os.path.exists(saved_params_path))
     tf.io.gfile.rmtree(model_dir)
 

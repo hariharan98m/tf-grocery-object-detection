@@ -31,7 +31,7 @@ class EncodersTest(tf.test.TestCase):
     encoder = encoders.build_encoder(config)
     ckpt = tf.train.Checkpoint(encoder=encoder)
     ckpt_path = ckpt.save(self.get_temp_dir() + "/ckpt")
-    params_save_path = os.path.join(self.get_temp_dir(), "params.yaml")
+    params_save_path = os.path.join(self.get_temp_dir(), "model_params.yaml")
     hyperparams.save_params_dict_to_yaml(config, params_save_path)
 
     retored_cfg = encoders.EncoderConfig.from_yaml(params_save_path)

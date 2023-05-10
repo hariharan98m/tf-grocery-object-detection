@@ -251,7 +251,7 @@ def main(argv):
       if task is None:
         exp_config = _get_exp_config(
             input_meta_data=input_meta_data,
-            exp_config_files=[os.path.join(FLAGS.model_dir, 'params.yaml')])
+            exp_config_files=[os.path.join(FLAGS.model_dir, 'model_params.yaml')])
         task = task_factory.get_task(
             exp_config.task, logging_dir=FLAGS.model_dir)
       _write_submission_file(task, input_meta_data['max_seq_length'])

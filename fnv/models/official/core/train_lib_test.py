@@ -103,7 +103,7 @@ class TrainTest(tf.test.TestCase, parameterized.TestCase):
     else:
       self.assertEmpty(logs)
     self.assertNotEmpty(
-        tf.io.gfile.glob(os.path.join(model_dir, 'params.yaml')))
+        tf.io.gfile.glob(os.path.join(model_dir, 'model_params.yaml')))
     if flag_mode == 'eval':
       return
     self.assertNotEmpty(

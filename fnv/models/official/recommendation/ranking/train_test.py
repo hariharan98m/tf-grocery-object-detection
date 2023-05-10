@@ -105,7 +105,7 @@ class TrainTest(parameterized.TestCase, tf.test.TestCase):
                                                  strategy=strategy)
     train.main('unused_args')
     self.assertNotEmpty(
-        tf.io.gfile.glob(os.path.join(self._model_dir, 'params.yaml')))
+        tf.io.gfile.glob(os.path.join(self._model_dir, 'model_params.yaml')))
 
   @parameterized.named_parameters(
       ('DlrmTPUCTL', 'tpu', 'dot', True),
@@ -129,7 +129,7 @@ class TrainTest(parameterized.TestCase, tf.test.TestCase):
     FLAGS.mode = 'train'
     train.main('unused_args')
     self.assertNotEmpty(
-        tf.io.gfile.glob(os.path.join(self._model_dir, 'params.yaml')))
+        tf.io.gfile.glob(os.path.join(self._model_dir, 'model_params.yaml')))
 
     # Evaluation.
     FLAGS.mode = 'eval'

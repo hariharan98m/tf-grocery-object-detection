@@ -40,7 +40,7 @@ def export(
   """Exports the model specified in the exp config.
 
   Saved model is stored at export_dir/saved_model, checkpoint is saved
-  at export_dir/checkpoint, and params is saved at export_dir/params.yaml.
+  at export_dir/checkpoint, and params is saved at export_dir/model_params.yaml.
 
   Args:
     input_type: One of `image_tensor`, `image_bytes`, `tf_example`.

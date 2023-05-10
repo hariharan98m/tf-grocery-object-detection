@@ -343,7 +343,7 @@ def serialize_config(params: config_definitions.ExperimentConfig,
   """Serializes and saves the experiment config."""
   if model_dir is None:
     raise ValueError('model_dir must be specified, but got None')
-  params_save_path = os.path.join(model_dir, 'params.yaml')
+  params_save_path = os.path.join(model_dir, 'model_params.yaml')
   logging.info('Saving experiment configuration to %s', params_save_path)
   tf.io.gfile.makedirs(model_dir)
   hyperparams.save_params_dict_to_yaml(params, params_save_path)
